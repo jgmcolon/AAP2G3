@@ -1,0 +1,162 @@
+<!--************************Daniel Hernandez Grupo 3***********************************-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cita</title>
+    <style>
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            font-family: "Gill Sans", sans-serif;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .radio {
+            transform: scale(2);
+        }
+
+
+
+        body {
+            font-family: sans-serif;
+        }
+
+        h1 {
+            font-family: monospace;
+        }
+
+        div {
+            background-color: #d29bfd;
+            font-size: 24px;
+            padding: 1px;
+            border: 1px solid #d29bfd;
+            border-radius: 25px;
+            width: fit-content;
+        }
+
+        form {
+
+            margin: 5px;
+            padding: 15px 150px;
+            border: 2px solid #d29bfd;
+            border-radius: 25px;
+            background-color: #aff7ff;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .button {
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+            background-color: #a529fe;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <h1>Realiza tu cita con expertos de ginecología</h1>
+        <div>
+
+            <form action="https://csisasoluciones.com/wp-content/uploads/2019/11/6cf44dbf4bfeed32c32618318a80fc63.png"
+                method="post">
+                <label for="cedula">Cédula</label><br />
+                <input type="number" id="cedula" name="cedula" required placeholder="40209867845">
+                <br /><br />
+
+                <label for="nombre">Nombre completo</label><br />
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre y apellido" required>
+                <br /><br />
+
+                <label for="fecha">Fecha cita</label><br />
+                <input type="date" id="fecha" name="fecha" required>
+                <br /><br />
+
+                <label for="hora">Hora de la cita</label><br />
+                <input type="time" id="hora" name="hora" required>
+                <br /><br />
+
+                <label for="doctor">Doctor</label><br />
+                <select name="doctor" id="doctor" required>
+                    <optgroup label="Medicina Materno Fetal">
+                        <option>Felipe A.</option>
+                        <option>Felipe B.</option>
+                    </optgroup>
+                    <optgroup label="Biología Reproductiva">
+                        <option>Felipe C.</option>
+                        <option>Felipe D.</option>
+                    </optgroup>
+                    <optgroup label="Cirugía Reproductiva">
+                        <option>Felipe E.</option>
+                        <option>Felipe F.</option>
+                    </optgroup>
+                    <optgroup label="Ginecológica">
+                        <option>Felipe G.</option>
+                        <option>Felipe H.</option>
+                    </optgroup>
+                </select>
+                <br /><br />
+
+                <label for="motivo">Motivo de consulta</label><br />
+                <textarea name="motivo" id="motivo" placeholder="Escriba su problemática aquí" maxlength="130" rows="6"
+                    style="resize: none;" required></textarea>
+                <br /><br />
+
+                <p>¿Solicita hacer un seguimiento?</p>
+                <label for="seguimiento1">Si</label>
+                <input type="radio" id="seguimiento1" name="seguimiento" class="radio">
+                <label for="seguimiento2">No</label>
+                <input type="radio" id="seguimiento2" name="seguimiento" class="radio" checked>
+                <br /><br />
+
+                <p>¿Es un paciente nuevo?</p>
+                <label for="paciente1">Si</label>
+                <input type="radio" id="paciente1" name="paciente" class="radio" checked>
+                <label for="seguimiento2">No</label>
+                <input type="radio" id="paciente2" name="paciente" class="radio">
+                <br /><br />
+
+                <label for="edad">Ingrese su edad</label><br />
+                <input type="number" id="edad" name="edad" min="0" max="130" required>
+                <br /><br />
+
+
+                <label for="nombreCompa">Nombre de acompañante si lo posee</label><br />
+                <input type="text" id="nombreCompa" name="nombreCompa" placeholder="Nombre y apellido">
+                <br /><br />
+
+                <label for="relacionCompa">Relación con el acompañante</label><br />
+                <select name="relacionCompa" id="relacionCompa">
+                    <optgroup label="Si no posee acompañante">
+                        <option>Ninguna</option>
+                    </optgroup>
+                    <optgroup label="Si posee acompañante">
+                        <option>Tutor</option>
+                        <option>Familiar</option>
+                        <option>Amigo/Amiga</option>
+                        <option>Niñero/Niñera</option>
+                    </optgroup>
+                </select>
+                <br /><br />
+
+                <label for="fechaCovid">¿Sufrió de Covid? <br />Ingrese la fecha de los sítomas</label><br />
+                <input type="date" id="fechaCovid" name="fechaCovid">
+                <br /><br />
+                <input type="submit" value="Enviar" class="button">
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
